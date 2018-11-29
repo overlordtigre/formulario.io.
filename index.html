@@ -1,0 +1,149 @@
+<!Doctype html >
+
+<head>
+    <style type="text/css">
+     h1 {
+        color: black;
+        text-align: center;
+        font-style: initial;
+        font-family: "Time New Roman";
+        border: 10px outset #a59f9f;
+        border-radius: 5px;
+        width: fit-content;
+        height: fit-content;
+        background-color: #a59f9f;    
+        animation-name: example;
+        animation-duration: 6s;
+    }
+   
+    @keyframes example {
+        from {
+            color: red;
+        }
+        
+        to {
+            color: lightcoral;
+        }
+    }
+    
+    body {
+        font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+        font-weight: bold;
+    }
+    fieldset {
+        background: lightskyblue;
+        border: double;
+        border-color: darkblue;
+        border-radius: 5px;
+        width: 30px;
+    }
+    .contact_form input,
+    .contact_form select,
+    .contact_form textarea {
+        border: 1px solid rgb(100, 234, 252);
+        box-shadow: 0px 0px 3px rgb(179, 191, 247), 0 10px 15px rgb(221, 223, 224) inset;
+        border-radius: 2px;
+    }
+    .contact_form button,
+    .contact_form input:focus,
+    .contact_form textarea:focus {
+        background: #fff;
+        border: 1px solid rgb(26, 219, 210);
+        box-shadow: 0 0 3px rgb(177, 225, 241);
+    }
+    table {
+        background-clip: border-box;
+        background-color: lightgray;
+        background-blend-mode: color;
+    }
+    .contact_form h1,
+    .contact_form label {
+        font-family: Georgia, Times, "Times New Roman", serif;
+        color: black;
+    }
+    .form_hint,
+    .required_notification {
+        font-size: 11px;
+    }
+     ::-moz-placeholder {
+        color: blue;
+    }
+     ::-webkit-input-placeholder {
+        color: blue;
+    }
+    * :focus {
+        outline: none;
+    }
+    </style>
+    <title> Serviço Social </title>
+    <meta name="description" content="cadastro de pacientes">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="funcoes.js"></script>
+    <link rel="stylesheet" href="estilo.css" type="text/css" />
+</head>
+
+<body>
+    <h1 class="h1"> Cadastro de Atendimento Serviço Social</h1>
+       <form id="frmCadastro" class="contact_form" action="" method="POST">
+
+        <fieldset>
+            <legend>Ficha Cadastro</legend>
+            <table cellspacing="15">
+                <thead>
+                    <tr>
+                        <td><label for="assistente">Assistente:</label> </td>
+                        <td align="left"><select type="text" id="assistente" name="assistente">
+                            <option value=""></option>
+                        <option value="Marli">Marli</option>
+                        <option value="Giselli">Giselli</option>
+                        <option value="Gabriela">Gabriela</option>
+                        <option value="Erica">Erica</option>
+                            </select>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><label for="FAA">FAA: </label></td>
+                        <td align="left"><input id="FAA" type="number" name="FAA" maxlength="10" size="5"></td>
+                        <td> <label for="nascimento">Nascimento: </label></td>
+                        <td align="absbottom"><input id="dia" type="date" name="dia" size="6" maxlength="10" placeholder="data"> </td>
+                    </tr>
+                    <tr>
+                        <td><label for="nome">Nome: </label></td>
+                        <td align="left"><input type="text" id="nome" name="nome"></td>
+                        <td><label for="idade">Idade: </label></td>
+                        <td align="left"><input type="text" id="idade" name="idade" maxlength="3" size="4"></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="sexo">Sexo: </label>
+                        </td>
+                        <td align="left">
+                            <select name="sexo" id="sexo">
+                                    <option value=""></option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Feminino">Feminino</option>
+                                </select>
+                            <td><label for="CID">Diagnostico: </label></td>
+                            <td align="left"><input type="text" id="CID" name="CID" size="15" maxlength="15"></td>
+                        </td>
+                    </tr>
+                </tbody>
+
+                <th>
+                    <th>
+                        <input type="submit" value="Salvar" id="btnSalvar" />
+                        <input type="reset" name="b2" value="Limpar">
+                    </th>
+                </th>
+            </table>
+        </fieldset>
+    </form>
+    <table id="tblListar">
+
+    </table>
+</body>
